@@ -23,8 +23,22 @@ const { title } = Astro.props;
 
 		<Hero/>
 	</head>
-	
-	<body style="background-color: #03071d;">
+
+
+	<body style="background-color: #03071d;" onload="my_modal_1.showModal()">
+
+		<dialog id="my_modal_1" class="modal">
+			<form method="dialog" class="modal-box">
+			  <h3 class="font-bold text-lg">🍪 Delicious Cookies Alert 🍪</h3>
+			  <p class="py-4">We use cookies to <b class="text-secondary">enhance your browsing experience</b> and keep track of your every move on our website. By clicking <b class="text-secondary">Accept</b> you consent to the use of cookies and acknowledge that we will collect and process your data. Don't worry, we won't ask for your permission again (unless the law forces us to). If you'd rather keep your digital diet cookie-free, click Decline and prepare for a slightly less personalized experience.</p>
+			  <div class="modal-action">
+				<button class="btn">Accept</button> 
+				<button class="btn btn-disabled">Decline</button>
+			  </div>
+			</form>
+		  </dialog>
+			  
+
 		<slot/>
 	</body>
 
